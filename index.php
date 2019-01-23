@@ -3,7 +3,7 @@
  <head>
  	<meta charset=utf-8>
  	<link rel="stylesheet" href="dist/app.css">
- 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700" rel="stylesheet">
+ 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
  	<title>php-google-faq</title>
  </head>
@@ -87,43 +87,50 @@
     ?>
 
   <div id="main_container">
+
     <nav>
       <div class="upper">
-          <img src="dist/assets/googlelogo_color_74x24dp.png">
-          Privacy e termini
+          <a href="#"><img src="dist/assets/googlelogo_color_74x24dp.png"></a>
+          <a href="#">Privacy e termini</a>
       </div>
       <div class="lower">
         <a href="#">Introduzione</a>
         <a href="#">Norme sulla privacy</a>
         <a href="#">Termini di servizio</a>
         <a href="#">Tecnologie</a>
-        <a href="#">Domande frequenti</a>
+        <a href="#" class="active">Domande frequenti</a>
         <a href="#">Account Google</a>
       </div>
     </nav>
+
     <div class="faqs">
-        <div class="faq">
+      <div class="container">
           <?php foreach ($faqs as $faq): ?>
-            <h2><?php echo $faq['question']; ?></h2>
-            <p><?php echo $faq['answer']; ?></p>
+            <div class="faq">
+              <h2><?php echo $faq['question']; ?></h2>
+              <p><?php echo $faq['answer']; ?></p>
+            </div>
           <?php endforeach; ?>
-        </div>
-    </div>
-    <footer>
-      <div class="links">
-        <a href="#">Google</a>
-        <a href="#">Tutto su Google</a>
-        <a href="#">Privacy</a>
-        <a href="#">Termini</a>
       </div>
-      <div class="language">
-      <i class="fas fa-language"></i>
-      <select class="lang_select">
-        <option value="it">Italiano</option>
-        <option value="en">Inglese</option>
-        <option value="de">Tedesco</option>
-        <option value="fr">Francese</option>
-      </select>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="links">
+          <a href="#">Google<i class="fas fa-circle"></i></a>
+          <a href="#">Tutto su Google<i class="fas fa-circle"></i></a>
+          <a href="#">Privacy<i class="fas fa-circle"></i></a>
+          <a href="#">Termini</a>
+        </div>
+        <div class="language">
+        <i class="fas fa-language"></i>
+        <select class="lang_select">
+          <option value="it">Italiano</option>
+          <option value="en">Inglese</option>
+          <option value="de">Tedesco</option>
+          <option value="fr">Francese</option>
+        </select>
+        </div>
       </div>
     </footer>
 

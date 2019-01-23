@@ -1,0 +1,42 @@
+
+
+//PADDING
+$defaultPaddingX: 15px;
+
+//CONTAINER
+$containerDefaultWidth: 992px;
+
+//TEXT
+$defaultFont: 'Open Sans', sans-serif;
+$defaultFontSize: 16px;
+$tabletFontSize: 14px;
+$mobileFontSize: 12px;
+$regularFontSize: 1rem;
+$smallerFontSize: 0.8rem;
+$extraSmallFontSize: 0.6rem;
+$biggerFont: 1.3rem;
+$bolderFont: 600;
+
+
+//NAVBAR
+$navbarHeight: 80px;
+$navbarLowerHeight: 25px;
+$navbarUpperHeight: $navbarHeight - $navbarLowerHeight;
+$navbarLowerLinksSpacing: 30px;
+$navbarBorderBottom: 1px solid lightgrey;
+$navbarDefaultTextColor: #5f6368;
+$selectedLinkTextColor: #3367d6;
+$selectedLinkBorderBottom: 2px solid  rgb(51, 103, 214);
+
+//FAQS
+$faqsContainerPaddingY: 50px;
+$faqSpacingY: 20px;
+$faqH2FontSize: $regularFontSize;
+$faqParagraphFontSize: $smallerFontSize;
+
+//FOOTER
+$footerPaddingX: 5px;
+$footerBackgroundColor: rgb(245, 245, 245);
+$footerLinksColor: rgba(61,61,61,.8);
+$footerLinksMarginRight: 5px;
+$footerLanguageElementsHeight: 13px;

@@ -1,0 +1,64 @@
+
+@mixin navBarDefault {
+  height: $navbarHeight;
+  width: 100%;
+  background: white;
+}
+
+@mixin navSection {
+  padding-left: $defaultPaddingX;
+  padding-right: $defaultPaddingX;
+  * {
+    color: $navbarDefaultTextColor;
+  }
+}
+
+@mixin navLinks($position) {
+  display: inline-block;
+  font-weight: $bolderFont;
+  @if ($position == 'upper') {
+    height: $navbarUpperHeight;
+    line-height: $navbarUpperHeight;
+    margin-right: 16px;
+    &:nth-child(2) {//Privacy e termini link
+      vertical-align: bottom;
+      }
+  } @else {//lower
+    line-height: $navbarLowerHeight;
+    margin-right: $navbarLowerLinksSpacing;
+    font-size: $smallerFontSize;
+    &.active {
+      line-height: $navbarLowerHeight - 4px;
+      color: $selectedLinkTextColor;
+      border-bottom: $selectedLinkBorderBottom;
+    }
+    &:nth-last-child(1) {
+      float: right;
+    }
+  }
+}
+
+nav {
+  @include navBarDefault;
+  @include positionFixedTop;
+  border-bottom: $navbarBorderBottom;
+
+  .upper {
+    @include navSection;
+    height: $navbarUpperHeight;
+    a {
+      @include navLinks('upper');
+      img {
+        margin-top: 15px;
+        }
+      }
+    }
+
+  .lower {
+    @include navSection;
+    height: $navbarLowerHeight;
+    a {
+        @include navLinks('lower');
+    }
+  }
+}

@@ -1,0 +1,44 @@
+
+@mixin defaultFooterLink {
+  color: $footerLinksColor;
+  font-size: $extraSmallFontSize;
+  margin-right: $footerLinksMarginRight;
+}
+
+@mixin footerDotIcons {
+  margin-left: 5px;
+  font-size: 0.1rem;
+  vertical-align: middle;
+}
+
+@mixin languageElement {
+  height: $footerLanguageElementsHeight;
+  font-size: $extraSmallFontSize;
+  line-height: $footerLanguageElementsHeight;
+}
+
+footer {
+  padding: $footerPaddingX 0px;
+  background-color: $footerBackgroundColor;
+  .container {
+    @include floatingChildren;
+    .links {
+      a {
+        @include defaultFooterLink;
+        i {
+          @include footerDotIcons;
+        }
+      }
+    }
+    .language {
+      float: right;
+      i {
+        @include languageElement;
+      }
+      select {
+        border-radius: 3px;
+        @include languageElement;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+
+.faqs {
+  margin-top: $navbarHeight;
+  .container {
+    padding-top: $faqsContainerPaddingY;
+    padding-bottom: $faqsContainerPaddingY;
+    .faq {
+      margin-bottom: $faqSpacingY;
+      h2 {
+        font-size: $regularFontSize;
+        margin-bottom: $faqSpacingY;
+      }
+      p {
+        font-size: $smallerFontSize;
+      }
+    }
+  }
+}
