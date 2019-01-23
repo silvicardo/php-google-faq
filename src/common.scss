@@ -55,14 +55,15 @@
    z-index: 1;
  }
 
- @mixin floatingChildren($direction: 'left') {
-   & > div {
-       @if ($direction == 'left') {
-        float: left;
-      } @else {
-        float: right;
-      }
-   }
+ @mixin float($direction: 'left') {
+   @if ($direction == 'left') {
+    float: left;
+  } @else {
+    float: right;
+  }
+ }
+
+ @mixin clearfix {
    &:after {
      content: '';
      display: table;

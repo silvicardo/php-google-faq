@@ -21,8 +21,9 @@ footer {
   padding: $footerPaddingX 0px;
   background-color: $footerBackgroundColor;
   .container {
-    @include floatingChildren;
+    @include clearfix;
     .links {
+      @include float;
       a {
         @include defaultFooterLink;
         i {
@@ -31,7 +32,7 @@ footer {
       }
     }
     .language {
-      float: right;
+      @include float('right');
       i {
         @include languageElement;
       }

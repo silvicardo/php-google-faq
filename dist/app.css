@@ -56,13 +56,20 @@ nav {
   border-bottom: 1px solid lightgrey;
 }
 
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 nav .upper {
+  float: left;
   padding-left: 15px;
   padding-right: 15px;
   height: 55px;
 }
 
-nav .upper * {
+nav .upper a {
   color: #5f6368;
 }
 
@@ -83,12 +90,13 @@ nav .upper a img {
 }
 
 nav .lower {
+  float: right;
   padding-left: 15px;
   padding-right: 15px;
   height: 25px;
 }
 
-nav .lower * {
+nav .lower a {
   color: #5f6368;
 }
 
@@ -137,14 +145,14 @@ footer {
   background-color: whitesmoke;
 }
 
-footer .container > div {
-  float: left;
-}
-
 footer .container:after {
   content: "";
   display: table;
   clear: both;
+}
+
+footer .container .links {
+  float: left;
 }
 
 footer .container .links a {

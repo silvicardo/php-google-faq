@@ -8,7 +8,7 @@
 @mixin navSection {
   padding-left: $defaultPaddingX;
   padding-right: $defaultPaddingX;
-  * {
+  a {
     color: $navbarDefaultTextColor;
   }
 }
@@ -41,9 +41,11 @@
 nav {
   @include navBarDefault;
   @include positionFixedTop;
+  @include clearfix;
   border-bottom: $navbarBorderBottom;
 
   .upper {
+    @include float;
     @include navSection;
     height: $navbarUpperHeight;
     a {
@@ -55,6 +57,7 @@ nav {
     }
 
   .lower {
+    @include float('right');
     @include navSection;
     height: $navbarLowerHeight;
     a {
