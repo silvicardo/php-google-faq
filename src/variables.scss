@@ -8,13 +8,15 @@ $containerDefaultWidth: 992px;
 
 //TEXT
 $defaultFont: 'Open Sans', sans-serif;
-$defaultFontSize: 16px;
-$tabletFontSize: 14px;
-$mobileFontSize: 12px;
-$regularFontSize: 1rem;
+
+$defaultBaseFontSize: 16px;
+$tabletBaseFontSize: 14px;
+$mobileBaseFontSize: 12px;
+
+$regularBaseFontSize: 1rem;
 $smallerFontSize: 0.8rem;
 $extraSmallFontSize: 0.6rem;
-$biggerFont: 1.3rem;
+$biggerFontSize: 1.3rem;
 $bolderFont: 600;
 
 
@@ -31,7 +33,7 @@ $selectedLinkBorderBottom: 2px solid  rgb(51, 103, 214);
 //FAQS
 $faqsContainerPaddingY: 50px;
 $faqSpacingY: 20px;
-$faqH2FontSize: $regularFontSize;
+$faqH2FontSize: $regularBaseFontSize;
 $faqParagraphFontSize: $smallerFontSize;
 
 //FOOTER

@@ -4,7 +4,7 @@
  	margin: 0;
  	padding:0;
  	box-sizing: border-box;
- 	font-size: 16px;
+ 	font-size: $defaultBaseFontSize;
   font-family: $defaultFont;
  }
 
@@ -13,7 +13,7 @@
  @media all and (max-width: 1149px) {
 
  	* {
- 		font-size: $tabletFontSize;
+ 		font-size: $tabletBaseFontSize;
  	}
 
  }
@@ -21,7 +21,7 @@
  @media all and (max-width: 768px) {
 
   * {
-	 font-size: $mobileFontSize;
+	 font-size: $mobileBaseFontSize;
   }
 
 }
